@@ -1,69 +1,93 @@
-* {
-    margin: 0;
-    padding: 0;
-    box-sizing: border-box;
-}
-body {
-    background-color: #eee;
-    font-family: 'Lato', sans-serif;
-}
-header {
+<!DOCTYPE html>
+<html>
+<head>
+<meta charset="utf-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>Siomai landing page</title>
+<link rel="stylesheet" type="text/css" href="styles.css">
+<script src='https://kit.fontawesome.com/a076d05399.js' crossorigin='anonymous'></script>
+<style>
+  #nav-bar {
     position: fixed;
     top: 0;
-    min-height: 75px;
-    padding: 0px 20px;
-    display: flex;
-    justify-content: space-around;
-    align-items: center;
-    background-color: #eee;
-}
-.logo {
-    width: 60vw;
-}
-nav {
-    font-weight: 400;
-}
-nav > ul {
-    width: 35vw;
-    display: flex;
-    flex-direction: row;
-    justify-content: space-around;
-}
-li {
-    list-style: none;
-}
-a {
-    color: #000;
-    text-decoration: none;
-}
-
-.container {
-    max-width: 1000px;
     width: 100%;
-    margin: 0 auto;
-}
-
-.page-wrapper {
-    position: relative;
-}
-
-.fa-utensils:before{
-content: "&#xf2e7";
-}
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
+    background-color: white;
+    z-index: 9999;
+    padding: 10px;
+  }
+  
+  /* Add some padding to the body to avoid content being hidden under the fixed nav bar */
+  body {
+    padding-top: 60px; /* Adjust this value as per your nav bar height */
+  }
+</style>
+</head>
+<body>
+  <div class="page-wrapper">
+    <header id="header">
+      <nav id="nav-bar">
+        <a class="nav-link" href="#List of Food">List of Food</a>
+        <a class="nav-link" href="#Food Pricing">Food Pricing</a>
+        <a class="nav-link" href="#Order Now">Order Now</a>
+      </nav>
+      <div class="logo">
+        <img src="https://www.pexels.com/photo/cooked-food-in-stainless-steamer-10114275/" id="header-img" alt="siomai in a stainless steamer">
+      </div>
+    </header>
+    <div class="container"></div>
+    <section id="hero">
+      <h2>Siomai my love</h2>
+      <form id="form" action="https://www.freecodecamp.com/email-submit">
+        <input name="email" id="email" type="email" placeholder="Enter your email address" required="">
+        <input id="submit" type="submit" name="email-submit">
+      </form>
+    </section>
+    <div>
+      <section id="List of Food"></section>
+      <div class="grid">
+        <div class="icon"><i class='fas fa-utensils'></i></div>
+        <div class="desc">
+          <h2>Premium Materials</h2>
+          <p>
+            Our siomai is yummy
+          </p>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="icon"><i class='fas fa-utensils'></i></div>
+        <div class="desc">
+          <h2>Premium Materials</h2>
+          <p>
+            Our siomai is yummy
+          </p>
+        </div>
+      </div>
+      <div class="grid">
+        <div class="icon"><i class='fas fa-utensils'></i></div>
+        <div class="desc">
+          <h2>Premium Materials</h2>
+          <p>
+            Our siomai is yummy
+          </p>
+        </div>
+      </div>
+      <section id="Food Pricing">
+        <iframe id="video" height="315" src="https://www.youtube.com/watch?v=OAGDylaxR0c" frameborder="0" allowfullscreen=""></iframe>
+      </section>
+      <section id="Order Now">
+        <div class="product" id="siomai">
+          <div class="level">Siomai Food</div>
+          <h2>Php 1,000</h2>
+          <ol>
+            <li>Lorem ipsum.</li>
+            <li>Lorem ipsum.</li>
+            <li>Lorem ipsum dolor.</li>
+            <li>Lorem ipsum.</li>
+          </ol>
+          <button class="btn">Select</button>
+        </div>
+      </section>
+    </div>
+  </div>
+</body>
+</html>
